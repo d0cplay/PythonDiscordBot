@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>PythonDiscordBot</Name>
     <RootNamespace>PythonDiscordBot</RootNamespace>
+    <InterpreterId>MSBuild|PDB-ENV|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,46 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="modules\control.py" />
+    <Compile Include="modules\core.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modules\data.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modules\db.py" />
+    <Compile Include="modules\cmd.py" />
+    <Compile Include="modules\oldlevelsystem.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modules\moderation.py" />
+    <Compile Include="modules\sample.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modules\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PythonDiscordBot.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modules\" />
+    <Folder Include="bot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="PDB-ENV\">
+      <Id>PDB-ENV</Id>
+      <Version>3.6</Version>
+      <Description>PDB-ENV (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bot\config.json">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -1,0 +1,28 @@
+{
+  "bot": {
+    "prefix": "!",
+    "display": "secret bot",
+    "status": "Guess iam the new one.",
+    "avatar": ".bot/avatar.png",
+    "token": "MzY3MzE0NTA1NjMxMjY4ODY2.XYYmVw.iV_wJkrGLlQX4kKYdL5sI7XmXDM",
+    "modules": {
+      "active": [
+        "core",
+        "control",
+        "moderation"
+      ],
+      "all": [ "sample" ]
+    },
+
+
+    "channels": {
+      "send": true,
+      "welcome": 682646947768696842,
+      "control": 682646895935356929,
+      "support": 682646863522168863
+    },
+    "roles": {
+      "member": "Member"
+    }
+  }
+}
