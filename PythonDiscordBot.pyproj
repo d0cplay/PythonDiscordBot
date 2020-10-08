@@ -59,6 +59,7 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bot\config_template.json" />
     <Content Include="bot\config.json">
       <SubType>Code</SubType>
     </Content>

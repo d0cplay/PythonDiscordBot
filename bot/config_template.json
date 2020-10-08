@@ -1,0 +1,28 @@
+{
+  "bot": {
+    "prefix": "!",
+    "display": "secret bot",
+    "status": "Guess iam the new one.",
+    "avatar": ".bot/avatar.png",
+    "token": "your token here",
+    "modules": {
+      "active": [
+        "core",
+        "control",
+        "moderation"
+      ],
+      "all": [ "sample" ]
+    },
+
+
+    "channels": {
+      "send": true,
+      "welcome": c_id,
+      "control": c_id,
+      "support": c_id
+    },
+    "roles": {
+      "member": "Member"
+    }
+  }
+}
